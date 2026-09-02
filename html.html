@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linguagem HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+         div{
+            background-color: rgb(173, 216, 230);
+        }
+
+        *{backgroud-color: greenyellow}
+
+        #cs{background-color: blueviolet;}
+        .textonormal{background-color: black;}
+
+
+        h1{ color:blue;}
+        span{font-size: 18pt}
+        section{
+            border-top-color: black;
+            border-top-style: solid;
+            border-top-width: 2px;
+
+            border-top: 2px dotted black;
+            border: 2px dotted blue;
+        }
+       
+        table#sepei,#sepei td, #sepei th{border:1px solid black;
+        border-collapse: collapse;
+        background-color: rgba(22, 54, 46, 0.3);
+    }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Origem do HTML</h1>
+    <p>Linguagem de marcação criada por Tim Bernes Lee (1990)
+        <a href="https://pt.wikipedia.org/wiki/Tim_Berners-Lee">
+            <strong> Visit Tim Bernes Lee (1990)</strong>
+        </a>
+        para compartilhamento de documento no <br> CERN
+    </p>
+     <img id="imagem-cern" draggable="true" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9hHquVJfu2s9NJh4NfnOStsedBrcLjod2G3n1cvcNg&s=10" alt="CERN" width="500" height="600">
+    </div>
+    <hr>
+    <section id = "cs">
+    <h2>Arquitetura Cliente servidor da WEB</h2>
+    <p>As tecnologias fundamentais que compõem a WEB são:</p>
+    <ul>
+        <li>Arquitetura Cliente Servidor</li>
+        <li><mark>HTTP</mark> - Hyper Text Transfer Protocol</li>
+        <li>HTML - <em>Hyper Text Markup Language</em>
+        <del>é linguagem de programação</del><sub>nota1</sub></li>
+        <li>Navegador Cliente</li>
+        <li>Servidor web</li>
+    </ul>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRH75TJySDd9VBzH8OwcBtelKA1F6azxsQf_LofYaMBA&s=10">
+</section>
+    <p>Ao longo dos anos foram a web evoluiu e nova tecnologias foram incorporadas como <span>CSS</span> e JavaScript</p>
+<p>a=ax+bx <sup>2</sup>+c</p>
+
+<section id="listas">
+   
+    <p>Listas Não ordenada</p>
+<ul>
+    <li>mamão</li>
+    <li>peroba</li>
+    <li>maçã</li>
+</ul>
+
+<p>Listas ordenada</p>
+<ol type="1" start="0" reversed>
+    <li>mamão</li>
+    <li>peroba</li>
+    <li>maçã</li>
+</ol>
+<dl>
+    <dt>Leite</dt>
+    <dd>bebida nutritiva extraida de mamíferos.</dd>
+
+    <dt>Café</dt>
+    <dd>bebida obtida com a torra e fervura de grão de café, essêncial a vida.</dd>
+</dl>
+</section id table>
+<p>blablablablabla</p>
+
+<table>
+    <caption>Churrasco Finaleira</caption>
+    <tr>
+        <td>indice</td><td>nome</td><td>valor</td>
+    </tr>
+    <tr>
+        <td>1</td><td>carne</td><td>50,00</td>
+    </tr>
+    <tr>
+        <td>2</td><td>linguiça</td><td>50,00</td>
+    </tr>
+    <tr>
+        <td>3</td><td>carvão</td><td>30,00</td>
+    </tr>
+    <tr>
+        <td>4</td><td>Agua com gás</td><td>30,00</td>
+    </tr>
+    <tr>
+        <td>4</td><td>Refrigerante</td><td>60,00</td>
+    </tr>
+    <tr>
+    <td colspan="2" rowspan="1">Total</td>
+    <td>260,00</td>
+    </tr>  
+
+</table>
+<style>
+
+</style>
+<table id="sepei">
+    <caption>SEPEI 2026</caption>
+    <tr><th>Indice</th><th>Nome</th><th>Idade</th></tr>
+    <tr><td>1</td><td>Mateus</td><td>17</td></tr>
+    <tr><td>2</td><td>Braian</td><td>17</td></tr>
+    <tr><td>3</td><td>Brenno</td><td>16</td></tr>
+    <tr><td>4</td><td>Boos</td><td>17</td></tr>
+     <tr><td>5</td><td>Robinson Charles</td><td>18</td></tr>
+    <tr><td colspan="2"> Total alunos</td> <td>5</td></tr>
+</table>
+
+    <section>
+        <h1>Formulário</h1>
+        <p>As tags de formulário permitem entrada de dado</p>
+
+        <form action="">
+            <label for="inputnome">Nome:</label>
+            <input id="inputnome" type="text">
+
+            <label for="inputTelefone">Telefone:</label>
+            <input id="inputTelefone" type="tel" pattern="">
+            <input type="submit" value="Enviar ">
+        </form>
+           
+        <form action="https://google.com/search">
+            <input type="text" name="q">
+            <input type="submit">
+
+            <form method="post">
+                <label for="usr">Usuário</label>
+                <input id="usr" type="text" name="usuario">
+
+                <label for="usr">Senha</label>
+                <input id="usr" type="password" name="senha">
+
+            </form>
+        </form>
+    </section>
+</body>
+</html>
