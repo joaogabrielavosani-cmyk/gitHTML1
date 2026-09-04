@@ -69,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
             int r= (random.nextInt(max-min)+min);
 
-            textView.setText(Integer.toString(r)); //setar valor
+            textView.setText(Integer.toString(r));
+            s.setText("plin");//setar valor
         });
 
     }
