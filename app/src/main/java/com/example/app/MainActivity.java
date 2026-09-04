@@ -1,5 +1,6 @@
 package com.example.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -70,7 +71,10 @@ public class MainActivity extends AppCompatActivity {
             int r= (random.nextInt(max-min)+min);
 
             textView.setText(Integer.toString(r));
-            s.setText("plin");//setar valor
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            startActivity(intent);
+            intent.putExtra("valor", r);
+            startActivity(intent);
         });
 
     }
