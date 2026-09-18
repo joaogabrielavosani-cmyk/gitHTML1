@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-    int c=0;
+    int posicao=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,46 +37,25 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         // Associar componetes da IU
-        EditText edMin, edMax;
-        edMin = findViewById(R.id.edMIn);
-        edMax = findViewById(R.id.edMax);
 
-        TextView textView = findViewById(R.id.textView2);
-        Button s= findViewById(R.id.button);
+        Integer[] images = new Integer[]{
+                R.drawable.cachorro;
+                R.drawable.gardem;
+                R.drawable.happy;
+                R.drawable.patinho;
+                R.drawable.porquinho;
+        }
+       Button botaovoltar, botaoavancar;
+       botaovoltar=findViewById(R.id.btn2);
+       botaoavancar=findViewById(R.id.btn2);
+        ImageView imageview - findViewById(R.id.imageView);
 
-
-        s.setOnClickListener(view -> {
-            Random random = new Random();
-            String smin= edMin.getText().toString();
-            String smax= edMax.getText().toString();
-            if (smin.trim().equals("")){
-                edMin.setError("Informar valor");
-                edMin.requestFocus();
-                return;
-            }
-
-            if (smax.trim().equals("")){
-                edMax.setError("Informar valor");
-                edMax.requestFocus();
-                return;
-            }
+       botaoavancar.setOnClickListener(View v -> {
+                   imageview.setImageResource(images[posicao]);
 
 
-            int min = Integer.parseInt(edMin.getText().toString());
-            int max = Integer.parseInt(edMax.getText().toString());
-            if (min>=max){
-                edMax.setError("Mínimo deve ser menor que o máximo");
-                return;
-            }
-
-            int r= (random.nextInt(max-min)+min);
-
-            textView.setText(Integer.toString(r));
-            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-            startActivity(intent);
-            intent.putExtra("valor", r);
-            startActivity(intent);
-        });
+               }
+               );
 
     }
 }
